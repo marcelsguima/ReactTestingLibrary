@@ -40,24 +40,11 @@ describe('Testando o Pokedex.js , verificar se', () => {
     });
   });
 
-  test('testa botão all', () => {
+  test('se é possível clicar no botão de filtragem', () => {
     render(<MemoryRouter><App /></MemoryRouter>);
 
     const btnAll = screen.getByRole('button', { name: /all/i });
     expect(btnAll).toBeInTheDocument();
     userEvent.click(btnAll);
   });
-  // const electricCard = screen.getByTestId('pokemon-type');
-  // expect(electricCard).toBeInTheDocument();
-
-  // userEvent.click(typeBtn);
 });
-
-//   test('se a página contém a imagem do pikachu', () => {
-//     render(<MemoryRouter><NotFound /></MemoryRouter>);
-
-//     const imgPikachu = screen.getByRole('img', {
-//       name: /pikachu crying because the page requested was not found/i,
-//     });
-//     expect(imgPikachu.src).toContain('https://media.giphy.com/media/kNSeTs31XBZ3G/giphy.gif');
-//   });
